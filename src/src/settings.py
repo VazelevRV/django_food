@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django_food_main.apps.DjangoFoodMainConfig',
     'reservation_requests',
     'accounts',
+    'menu',
 ]
 
 MIDDLEWARE = [

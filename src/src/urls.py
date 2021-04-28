@@ -21,6 +21,7 @@ from src import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('django_food_main.urls')),
+    path('', include('reservation_requests.urls')),
 ]
 
 if settings.DEBUG:

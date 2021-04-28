@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-     <!-- Required meta tags -->
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,7 +18,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary mb-3">
     <div class="container-fluid">
         <img class="image-responsive mx-2" style="width: 50px; height: 50px"
-             src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.pngonly.com%2Fwp-content%2Fuploads%2F2017%2F05%2FPotato-Clipart-PNG-Image-01.png&f=1&nofb=1" alt="">
+             src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.pngonly.com%2Fwp-content%2Fuploads%2F2017%2F05%2FPotato-Clipart-PNG-Image-01.png&f=1&nofb=1"
+             alt="">
         <a class="navbar-brand" href="/">Потата-Хата</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,6 +38,19 @@
                 </li>
             </ul>
         </div>
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+                {% if not user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Зареєструватися</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Вийти</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
     </div>
 </nav>
 
@@ -45,7 +59,8 @@
 
 <footer class="bg-secondary text-center text-lg-start mt-3">
     <div class="text-center p-3">
-        <a class="text-light" href="https://github.com/VazelevRV/django_food">https://github.com/VazelevRV/django_food</a>
+        <a class="text-light"
+           href="https://github.com/VazelevRV/django_food">https://github.com/VazelevRV/django_food</a>
     </div>
 </footer>
 

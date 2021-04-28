@@ -17,11 +17,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from src import settings
+from accounts.views import login_view, logout_view, register_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('django_food_main.urls')),
     path('', include('reservation_requests.urls')),
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout'),
+    path('register/', register_view, name='register'),
 ]
 
 if settings.DEBUG:

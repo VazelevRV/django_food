@@ -16,7 +16,6 @@ class Category(models.Model):
 
 class Dish(models.Model):
 
-    @staticmethod
     def get_file_name_dishes(self, filename):
         ext = filename.split('.')[-1]
         filename = f'{uuid4()}.{ext}'
@@ -35,7 +34,6 @@ class Dish(models.Model):
 
 class Event(models.Model):
 
-    @staticmethod
     def get_file_name_events(self, filename):
         ext = filename.split('.')[-1]
         filename = f'{uuid4()}.{ext}'

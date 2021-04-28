@@ -6,24 +6,32 @@
 
         <section id="reservation">
             <div class="row justify-content-center">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <h1 class="text-center text-light my-3 p-3 bg-secondary">Зарезервуйте собі місце ;)</h1>
                 <form name="makeReservation" id="reservationForm" novalidate action="" method="POST">
                     <div class="form-group">
                         {% csrf_token %}
                         {{ form.user_name }}
+                        <br>
                         {{ form.user_email }}
+                        <br>
                         {{ form.message }}
                     </div>
-                    <button type="submit" class="btn btn-custom btn-lg">Зарезервувати</button>
+                    <div class="text-center my-3">
+                        <button type="submit" class="btn btn-lg btn-primary bg-primary">Зарезервувати</button>
+                    </div>
                 </form>
             </div>
+                </div>
         </section>
 
         <section>
+
+            <h1 id="Events" class="text-center text-uppercase text-light bg-secondary p-3">Події</h1>
+
             <div class="row justify-content-center my-3 bg-primary">
 
                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-
-                    <h1 id="Events" class="text-center text-uppercase text-light">Події</h1>
 
                     <div id="eventsCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
                         <ol class="carousel-indicators">
@@ -75,7 +83,7 @@
         </section>
 
         <section>
-            <h1 id="Menu" class="text-center text-uppercase text-light">Меню</h1>
+            <h1 id="Menu" class="text-center text-uppercase text-light bg-secondary p-3">Меню</h1>
             <hr>
             {% for item in categories %}
                 <h2 class="text-center text-uppercase">{{ item.title }}</h2>
@@ -99,7 +107,7 @@
         </section>
 
         <section>
-            <h1 class="text-center text-uppercase text-light">Особливі особливості</h1>
+            <h1 class="text-center text-uppercase text-light bg-secondary p-3">Особливі особливості</h1>
             <hr>
             {% for item in special_categories %}
                 <h2 class="text-center text-uppercase">{{ item.title }}</h2>
